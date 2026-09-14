@@ -1,0 +1,34 @@
+name: Integrity check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Verify signed manifest
+        run: node --input-type=module -e "import('./scripts/integrity.mjs').then(m => m.verifyIntegrity())"
+      - name: Run queue tests
+        run: node --test tests/queue.test.mjs
+      - name: Run integrity tests
+        run: node --test tests/integrity.test.mjs
+      - name: Test actual MCP startup
+        run: node --test tests/startup.test.mjs
+      - name: Test safe uninstall
+        if: runner.os == 'Windows'
+        shell: powershell
+        run: ./tests/uninstall.test.ps1
