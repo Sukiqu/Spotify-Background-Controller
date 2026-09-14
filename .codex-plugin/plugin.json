@@ -1,0 +1,30 @@
+{
+  "name": "spotify-background",
+  "version": "1.3.2",
+  "description": "Spotify Background Controller for Spotify Connect playback without mouse, keyboard, or window focus changes.",
+  "author": {
+    "name": "suki",
+    "url": "https://github.com/Sukiqu"
+  },
+  "interface": {
+    "displayName": "Spotify Background Controller",
+    "shortDescription": "Ask Codex to play any song you want without interrupting what you're doing.",
+    "longDescription": "Spotify Background Controller is a personal Windows Spotify Connect controller with track search, explicit device selection, playback verification, PKCE authorization and encrypted token storage. Requires Spotify Premium and your own developer Client ID.",
+    "developerName": "suki",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": ["Connect Spotify Background Controller.", "Play Monster by Skillet on my computer.", "Add a song to my Spotify queue."]
+  },
+  "mcpServers": "./.mcp.json",
+  "repository": "https://github.com/Sukiqu/Spotify-Background-Controller",
+  "homepage": "https://github.com/Sukiqu/Spotify-Background-Controller#readme",
+  "keywords": ["spotify", "spotify-connect", "codex", "mcp", "windows", "music-control"]
+}
+
+
+
+
+
