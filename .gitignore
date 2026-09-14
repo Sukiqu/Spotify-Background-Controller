@@ -1,0 +1,14 @@
+.env
+.env.*
+*.dpapi
+*.dpapi.*
+tokens*.json
+node_modules/
+SpotifyBackground/
+spotify-background-state/
+*.log
+signing-private-key.pem
+*-private.pem
+*private-key*
+*.key
+dist/
