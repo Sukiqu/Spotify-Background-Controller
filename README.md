@@ -47,6 +47,6 @@ The controller sends requests through the Spotify Web API to an explicitly selec
 
 Version 1.3.2 is the current release. The controller is usable for local Windows Codex tasks and is still under active development. Live Spotify behavior depends on Spotify account access, Premium status, Development Mode limits, and the selected Connect device. Voice commands depend on voice support in the Codex session; this project does not provide its own speech-recognition service.
 
-This project is independent and is not an official Spotify or OpenAI product. Copyright © 2026 suki. All rights reserved. See [LICENSE.md](LICENSE.md) for usage terms.
+This project is independent and is not an official Spotify or OpenAI product. Copyright © 2026 sukiqu. All rights reserved. See [LICENSE.md](LICENSE.md) for usage terms.
 
 The controller checks its signed manifest before installation and startup. See [SECURITY.md](SECURITY.md#package-integrity) for verification details and limitations.

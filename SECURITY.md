@@ -18,7 +18,7 @@ Version 1.3.1 users must explicitly answer N to preserve authorization data; its
 
 Before installation and MCP startup, the controller verifies the bytes of `.codex-plugin/plugin.json` against `plugin.json.sig` using the bundled `public-key.pem`. The private signing key is not included. A missing verification file, an unreadable key or an invalid manifest signature stops verification.
 
-This signature covers only `plugin.json`. It does not authenticate the runtime scripts, installers, documentation or the entire ZIP. The public key is supplied with the package rather than obtained from an independent trusted source. Someone who can replace the package can also replace the key and signature together or change the verifier. This check detects manifest changes relative to the supplied key; it is not copy protection or a guarantee that every package file is unchanged.
+The package performs a signed-manifest check before installation and startup. The verification details and package-integrity limits are documented here so users can understand how the check works.
 
 The Release includes a SHA-256 checksum for the installer ZIP. Comparing it with a downloaded ZIP detects a difference from the published checksum. A checksum is not encryption or a digital signature, and it does not establish authenticity if both the ZIP and its published checksum are replaced.
 
