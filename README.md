@@ -68,4 +68,4 @@ Version 1.3.2 is the current release. The controller is usable for local Windows
 
 This project is independent and is not an official Spotify or OpenAI product. Copyright © 2026 suki. All rights reserved. See [LICENSE.md](LICENSE.md) for usage terms.
 
-The controller verifies the signed plugin manifest before starting. If the manifest is changed or removed, the MCP server stops with an integrity error. This detects modified packages; it cannot prevent a person with full control of the computer from replacing the verifier itself.
+Before installation and startup, the controller checks the signature of `.codex-plugin/plugin.json` using the bundled public key. This check covers the manifest only; it does not verify the scripts, installers, documentation or entire ZIP. Someone who can replace the package can also replace the key, signature or verifier. The Release provides a SHA-256 checksum to compare downloaded ZIP files. See [SECURITY.md](SECURITY.md#package-integrity) for the scope and limits of these checks.
