@@ -43,28 +43,7 @@ The controller sends requests through the Spotify Web API to an explicitly selec
 - [Data handling and security reports](SECURITY.md)
 - [Copyright and usage terms](LICENSE.md)
 
-## Development
-
-The server uses Node.js built-in modules and has no npm dependencies.
-
-The commands below are for a source checkout, not the installer ZIP. Clone the [source repository](https://github.com/Sukiqu/Spotify-Background-Controller) or download its source archive, then run the commands from its root directory. The installer ZIP intentionally excludes development tests and contributor files.
-
-```powershell
-node --test tests/*.test.mjs
-powershell.exe -NoProfile -ExecutionPolicy Bypass -File tests/uninstall.test.ps1
-```
-
-The automated checks use simulated Spotify responses and mocked uninstall operations. They do not verify live account playback or voice recognition.
-
-| Path | Purpose |
-| --- | --- |
-| `scripts/` | MCP server, Spotify requests, OAuth PKCE and Windows DPAPI token storage |
-| `.codex-plugin/plugin.json` | Plugin identity and presentation metadata |
-| `.mcp.json` | Companion MCP launch configuration |
-| `install.ps1` / `uninstall.ps1` | Local registration and removal |
-| `tests/` | Offline regression checks |
-
-## Project status
+## Application status
 
 Version 1.3.2 is the current release. The controller is usable for local Windows Codex tasks and is still under active development. Live Spotify behavior depends on Spotify account access, Premium status, Development Mode limits, and the selected Connect device. Voice commands depend on voice support in the Codex session; this project does not provide its own speech-recognition service.
 
