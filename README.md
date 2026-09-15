@@ -39,13 +39,15 @@ The controller sends requests through the Spotify Web API to an explicitly selec
 - [English: installation, connection, example commands and troubleshooting](README-ENGLISH.md)
 - [Türkçe: kurulum, bağlantı, örnek komutlar ve sorun giderme](README-TURKCE.md)
 - [Release history](CHANGELOG.md)
-- [Contributing and reporting issues](CONTRIBUTING.md)
+- [Contributing and reporting issues](https://github.com/Sukiqu/Spotify-Background-Controller/blob/main/CONTRIBUTING.md)
 - [Data handling and security reports](SECURITY.md)
 - [Copyright and usage terms](LICENSE.md)
 
 ## Development
 
 The server uses Node.js built-in modules and has no npm dependencies.
+
+The commands below are for a source checkout, not the installer ZIP. Clone the [source repository](https://github.com/Sukiqu/Spotify-Background-Controller) or download its source archive, then run the commands from its root directory. The installer ZIP intentionally excludes development tests and contributor files.
 
 ```powershell
 node --test tests/*.test.mjs
